@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.onurcebeci.movieapp.navigation.BannerScreen
+import com.onurcebeci.movieapp.navigation.Navigation
 import com.onurcebeci.movieapp.ui.theme.MovieAppTheme
 import com.onurcebeci.movieapp.viewModel.MovieViewModel
 
@@ -24,9 +26,11 @@ class MainActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
 
                     val movieViewModel = viewModel<MovieViewModel>()
-                    val state =movieViewModel.state
+                    val state = movieViewModel.state
 
-                    Text(text = state.movies.toString())
+                 //   Text(text = state.movies.toString())
+
+                            Navigation()
 
                 }
             }
